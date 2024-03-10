@@ -56,7 +56,8 @@ class Home extends Component {
       method: 'GET',
     }
     const response = await fetch(url, options)
-    if (response.ok) {
+    console.log(response)
+    if (response.ok === true) {
       const data = await response.json()
       // console.log(data)
       const updatedData = data.videos.map(eachVideo => ({
@@ -72,7 +73,8 @@ class Home extends Component {
         homeVideos: updatedData,
         apiStatus: apiStatusConstants.success,
       })
-    } else {
+    }
+    if (response.status === 401) {
       this.setState({apiStatus: apiStatusConstants.failure})
     }
   }

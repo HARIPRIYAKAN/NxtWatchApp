@@ -12,6 +12,8 @@ import {
   LoginButton,
   CheckboxStyle,
   Checkbox,
+  ImageContainer,
+  CheckboxContainer,
 } from './styledComponents'
 
 class Login extends Component {
@@ -64,14 +66,14 @@ class Login extends Component {
           value={password}
           onChange={this.onChangePassword}
         />
-        <div>
+        <CheckboxContainer>
           <Checkbox
             type="checkbox"
             id="checkbox"
             onChange={this.onShowPassword}
           />
           <CheckboxStyle htmlFor="checkbox">Show Password</CheckboxStyle>
-        </div>
+        </CheckboxContainer>
       </>
     )
   }
@@ -113,10 +115,13 @@ class Login extends Component {
     return (
       <LoginContainer>
         <Form onSubmit={this.onAddForm}>
-          <WebsiteLogoImg
-            src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
-            alt="website logo"
-          />
+          <ImageContainer>
+            <WebsiteLogoImg
+              src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+              alt="website logo"
+            />
+          </ImageContainer>
+
           <InputContainer>{this.renderUsernameField()}</InputContainer>
           <InputContainer>{this.renderPasswordField()}</InputContainer>
           <LoginButton type="submit">Login</LoginButton>

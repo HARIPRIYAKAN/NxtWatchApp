@@ -1,17 +1,27 @@
 import styled from 'styled-components'
 
+export const NotFoundPage = styled.div`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+`
 export const TopContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: ${props => props.bgColor};
+  height: 100vh;
+  width: 100vw;
 `
 export const NotFoundContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 `
 export const NotFoundHeading = styled.h1`
   font-family: 'Roboto';

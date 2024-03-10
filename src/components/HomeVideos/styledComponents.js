@@ -15,13 +15,13 @@ export const NoVideosImage = styled.img`
   }
 `
 export const NoVideosHeading = styled.h1`
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 25px;
   color: ${props => props.headingColor};
 `
 
 export const NoVideosNote = styled.p`
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 18px;
   color: ${props => props.noteColor};
 `
@@ -35,7 +35,7 @@ export const RetryButton = styled.button`
   padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 15px;
 `
 export const VideoCardList = styled.ul`
